@@ -76,17 +76,18 @@ class Whitediamond {
 	}
 
     collision(playerInfo) {
-
-        let obstacleX = this.x + this.width / 2 // change collision
+//collision happens faster than in the other obstacle Classes
+        let obstacleX = this.x + this.width
         let obstacleY = this.y + this.height
 
-        let playerX = playerInfo.x + playerInfo.width / 2
-        let playerY = playerInfo.y 
+        let playerX = playerInfo.x + playerInfo.width
+        let playerY = playerInfo.y + playerInfo.height
 
-        if (dist(obstacleX, obstacleY, playerX, playerY) > 20) {
+        if (dist(obstacleX, obstacleY, playerX, playerY) > 30) {
             return false
         } else {
 // in case of collision with the disco ball change Cat Image back to playerImage + make cat rotate --score
+            game.collisionSound.play()
             game.player.rotation = true
             game.score -= 50
             console.log(game.score)
@@ -122,7 +123,7 @@ class RainbowDiamond {
         } else {game.inSpace = true}
 
       
-// in case of collision change background Images für Zeitintervall von 10 s
+// in case of collision change background Images für Zeitintervall
         if (game.inSpace){
             game.background.backgroundImages = game.spaceBackground
         }

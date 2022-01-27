@@ -1,7 +1,7 @@
 const game = new Game();
 
 function preload() {
-    game.preload();
+    game.preload()
 }
 function setup() {
     createCanvas(1000, 600)

@@ -4,6 +4,7 @@ class Game {
         this.nightBackground
         this.spaceBackground
         this.score = 0
+        this.collisionSound
     }
 
     setup() {
@@ -18,6 +19,8 @@ class Game {
     }
 
     preload() {
+        // Sound geht nicht ....this.collisionSound = loadSound('sound/Grunting-from-Being-Hit-A5-www.fesliyanstudios.com.mp3')
+
         this.nightBackground = [
             {src: loadImage('assets/background/Parallax Desert Background (Seamless)/01_Sky.png'), x: 0, speed: 0},
             {src: loadImage('assets/background/Parallax Desert Background (Seamless)/02_Stars.png'), x: 0, speed: 0},
@@ -38,7 +41,7 @@ class Game {
    
 
         this.playerImage = loadImage('assets/character/trippycat.png')
-        this.trippyCatImage = [loadImage('assets/character/trippycatgreen.png'), loadImage('assets/character/trippycatred.png'), loadImage('assets/character/trippycatblue.png')]
+        this.trippyCatImage = [loadImage('assets/character/trippycatgreen.png'), loadImage('assets/character/trippycatorange.png'), loadImage('assets/character/trippycatpink.png'), loadImage('assets/character/trippycatturquoise.png'), loadImage('assets/character/trippycatyellow.png'), loadImage('assets/character/trippycatred.png'), loadImage('assets/character/trippycatblue.png')]
         this.rotatingCatImage = loadImage('assets/character/editor-1s-47px (1).gif')
 
         this.diamondImage = loadImage('assets/obstacles/pngkey.com-diamond-sparkle-png-4926558.png')
@@ -59,7 +62,7 @@ class Game {
         text(this.score, 880, 580)
 // cat stops rotating
         if(game.player.rotation){
-            if(frameCount % 150 === 0) {
+            if(frameCount % 200 === 0) {
             game.player.rotation = false
             game.player.catImage = game.playerImage
          }
