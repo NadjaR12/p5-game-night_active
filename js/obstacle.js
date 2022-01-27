@@ -26,7 +26,6 @@ class Obstacle {
 
     draw(){
         this.x--
-
         image(game.thirdeyeImage, this.x, this.y, this.width, this.height)
     }
 }
@@ -77,7 +76,8 @@ class Whitediamond {
 	}
 
     collision(playerInfo) {
-        let obstacleX = this.x + this.width / 2
+
+        let obstacleX = this.x + this.width / 2 // change collision
         let obstacleY = this.y + this.height
 
         let playerX = playerInfo.x + playerInfo.width / 2
@@ -86,9 +86,9 @@ class Whitediamond {
         if (dist(obstacleX, obstacleY, playerX, playerY) > 20) {
             return false
         } else {
-        // in case of collision change Cat Image back to playerImage
-            game.player.catImage = game.playerImage
-            game.score += 20
+        // in case of collision with the disco ball change Cat Image back to playerImage + make cat rotate - score
+            game.player.rotation = true
+            game.score -= 50
             console.log(game.score)
             return true
         }
@@ -96,9 +96,7 @@ class Whitediamond {
 
     draw(){
         this.x--
-        image(game.whiteDiamondImage, this.x, this.y, this.width, this.height)
-
-        
+        image(game.whiteDiamondImage, this.x, this.y, this.width, this.height) 
     }  
 }
 

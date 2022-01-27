@@ -10,7 +10,11 @@ class Player {
 
         this.forward = 0
         this.backward = 0
+
+        this.rotation = false
         this.catImage = game.playerImage
+        
+        this.score = 0
     }
 
     jump(){
@@ -50,7 +54,11 @@ class Player {
             this.backwardJump();
         }
 
-        console.log("here goes the player")
+        if (this.rotation === true){
+            this.catImage = game.rotatingCatImage
+            }
+
         image(this.catImage, this.x, this.y, this.width, this.height)
+      
     } 
 }

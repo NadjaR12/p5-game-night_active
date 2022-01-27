@@ -30,7 +30,7 @@ class Game {
 
         this.spaceBackground = [
         {src: loadImage('assets/background/Space/Nebula Blue.png'), x: 0, speed: 0},
-        {src: loadImage('assets/background/Parallax Desert Background (Seamless)/03_Moon.png'), x: 0, speed: 0},
+        //{src: loadImage('assets/background/Parallax Desert Background (Seamless)/03_Moon.png'), x: 0, speed: 0},
         {src: loadImage('assets/background/Space/Stars Small_1.png'), x: 0, speed: 2},
         {src: loadImage('assets/background/Space/Stars Small_2.png'), x: 0, speed: 3},
         {src: loadImage('assets/background/Space/Stars-Big_1_1_PC.png'), x: 0, speed: 4},
@@ -39,6 +39,7 @@ class Game {
 
         this.playerImage = loadImage('assets/character/trippycat.png')
         this.trippyCatImage = [loadImage('assets/character/trippycatgreen.png'), loadImage('assets/character/trippycatred.png'), loadImage('assets/character/trippycatblue.png')]
+        this.rotatingCatImage = loadImage('assets/character/editor-1s-47px (1).gif')
 
         this.diamondImage = loadImage('assets/obstacles/pngkey.com-diamond-sparkle-png-4926558.png')
         this.thirdeyeImage = loadImage('assets/obstacles/icons8-third-eye-symbol-64.png') 
@@ -50,6 +51,17 @@ class Game {
         clear()
         this.background.draw()
         this.player.draw()
+
+//scoreboard
+
+// cat stops rotating
+        if(game.player.rotation){
+            if(frameCount % 150 === 0) {
+            game.player.rotation = false
+            game.player.catImage = game.playerImage
+        }
+        }
+
 // obstacles - third eye
         if (frameCount % 100 === 0){
             this.obstacles.push(new Obstacle(this.thirdeyeImage))
@@ -68,7 +80,7 @@ class Game {
             }
         })
 // diamonds
-        if (frameCount % 1000 === 0){
+        if (frameCount % 800 === 0){
             this.diamonds.push(new Diamond(this.diamondImage))
             console.log(this.diamonds)
         }
@@ -85,7 +97,7 @@ class Game {
             }
         })
  // white Diamonds       
-        if (frameCount % 2300 === 0){
+        if (frameCount % 2670 === 0){
             this.whiteDiamonds.push(new Whitediamond(this.whiteDiamondImage))
             console.log(this.whiteDiamonds)
         }
@@ -101,6 +113,7 @@ class Game {
                 return true
             }
         })
+
 // Rainbow Diamonds       
            if (frameCount % 3800 === 0){
                this.rainbowDiamonds.push(new RainbowDiamond(this.rainbowDiamondImage))

@@ -1,17 +1,27 @@
 body {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        font-family: 'Roboto', sans-serif;
-        
-        background-color: #c72571;
-        background-image: url('assets/obstacles/icons8-third-eye-symbol-64.png');
-        background-repeat: repeat;
-        background-size:5%;
-      }
+  margin-top: 3%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: "brandon", sans-serif;
 
+
+  background-image: url('assets/obstacles/disco-ball-png-27276.png'), url('assets/obstacles/icons8-third-eye-symbol-64.png'), linear-gradient(to bottom, #f2709c, #ff9472);
+  background-repeat: no-repeat, repeat, repeat;
+  background-size: 7%, 5%, 100%;
+}
+     
 h1 {
-    color: rgb(46, 5, 99);
-    size: 40;
+  padding: 20px;
+  color: rgb(145, 53, 173);
+  font-size: 50px;
+  background-image: url('assets/obstacles/disco-ball-png-27276.png');
+  repeat: repeat;
+  background-size: 25%;
+}
+
+.container {
+  justify-content: flex-start;
+  flex-direction: row;
 }
