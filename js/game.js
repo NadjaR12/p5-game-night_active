@@ -55,11 +55,11 @@ class Game {
         this.background.draw()
         this.player.draw()
 //scoreboard
-        fill('#f2709c');
+        fill('white');
         textSize(40);
-        text('Score:', 750, 580);
+        text('Score:', 800, 580);
         textSize(40);
-        text(this.score, 880, 580)
+        text(this.score, 930, 580)
 // cat stops rotating
         if(game.player.rotation){
             if(frameCount % 200 === 0) {

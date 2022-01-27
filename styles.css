@@ -7,16 +7,16 @@ body {
   font-family: "brandon", sans-serif;
 
 
-  background-image: url('assets/obstacles/disco-ball-png-27276.png'), url('assets/obstacles/icons8-third-eye-symbol-64.png'), linear-gradient(to bottom, #f2709c, #ff9472);
+  background-image: url('assets/obstacles/disco-ball-png-27276.png'), url('assets/obstacles/icons8-third-eye-symbol-64.png'), linear-gradient(to bottom, #f2709c,#ff9472);
   background-repeat: no-repeat, repeat, repeat;
   background-size: 7%, 5%, 100%;
 }
      
 h1 {
   padding: 20px;
-  color: rgb(145, 53, 173);
+  color: rgb(168, 234, 236);
   font-size: 50px;
-  background-image: url('assets/obstacles/disco-ball-png-27276.png');
+  background-image: url('assets/obstacles/disco-ball-png-27276.png'), linear-gradient(to bottom, #f2709c, #ff9472);
   repeat: repeat;
   background-size: 25%;
 }
