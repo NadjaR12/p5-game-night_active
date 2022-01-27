@@ -40,10 +40,10 @@ class Game {
         this.playerImage = loadImage('assets/character/trippycat.png')
         this.trippyCatImage = [loadImage('assets/character/trippycatgreen.png'), loadImage('assets/character/trippycatred.png'), loadImage('assets/character/trippycatblue.png')]
 
-        this.diamondImage = loadImage('assets/obstacles/diamond-clipart-transparent-background-18.png')
+        this.diamondImage = loadImage('assets/obstacles/pngkey.com-diamond-sparkle-png-4926558.png')
         this.thirdeyeImage = loadImage('assets/obstacles/icons8-third-eye-symbol-64.png') 
-        this.whiteDiamondImage = loadImage('assets/obstacles/diamond-clipart-transparent-background-7.png')
-        this.rainbowDiamondImage = loadImage('assets/obstacles/pngkey.com-diamond-sparkle-png-4926558.png')
+        this.whiteDiamondImage = loadImage('assets/obstacles/disco-ball-png-27276.png')
+        this.rainbowDiamondImage = loadImage('assets/obstacles/Cookie-PNG-Download-Image.png')
     }
 
     draw() {
@@ -85,7 +85,7 @@ class Game {
             }
         })
  // white Diamonds       
-        if (frameCount % 2000 === 0){
+        if (frameCount % 2300 === 0){
             this.whiteDiamonds.push(new Whitediamond(this.whiteDiamondImage))
             console.log(this.whiteDiamonds)
         }
@@ -102,7 +102,7 @@ class Game {
             }
         })
 // Rainbow Diamonds       
-           if (frameCount % 1800 === 0){
+           if (frameCount % 3800 === 0){
                this.rainbowDiamonds.push(new RainbowDiamond(this.rainbowDiamondImage))
                console.log(this.rainbowDiamonds)
            }

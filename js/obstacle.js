@@ -73,7 +73,7 @@ class Whitediamond {
 		this.x = width
 		this.y = (Math.random() * height) / 2.5
 		this.width = 120
-		this.height = 100
+		this.height = 120
 	}
 
     collision(playerInfo) {
