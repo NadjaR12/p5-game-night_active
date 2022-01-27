@@ -13,8 +13,6 @@ class Player {
 
         this.rotation = false
         this.catImage = game.playerImage
-        
-        this.score = 0
     }
 
     jump(){

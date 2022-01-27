@@ -51,17 +51,19 @@ class Game {
         clear()
         this.background.draw()
         this.player.draw()
-
 //scoreboard
-
+        fill('#f2709c');
+        textSize(40);
+        text('Score:', 750, 580);
+        textSize(40);
+        text(this.score, 880, 580)
 // cat stops rotating
         if(game.player.rotation){
             if(frameCount % 150 === 0) {
             game.player.rotation = false
             game.player.catImage = game.playerImage
+         }
         }
-        }
-
 // obstacles - third eye
         if (frameCount % 100 === 0){
             this.obstacles.push(new Obstacle(this.thirdeyeImage))

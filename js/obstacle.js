@@ -18,7 +18,7 @@ class Obstacle {
         if (dist(obstacleX, obstacleY, playerX, playerY) > 25) {
             return false
         } else {
-            game.score += 10
+            game.score += 1
             console.log(game.score)
             return true
         }
@@ -53,7 +53,7 @@ class Diamond {
         } else {
         // in case of collision change Cat Image
             game.player.catImage = game.trippyCatImage[Math.floor(Math.random() * game.trippyCatImage.length)]
-            game.score += 50
+            game.score += 20
             console.log(game.score)
             return true
         }
@@ -86,7 +86,7 @@ class Whitediamond {
         if (dist(obstacleX, obstacleY, playerX, playerY) > 20) {
             return false
         } else {
-        // in case of collision with the disco ball change Cat Image back to playerImage + make cat rotate - score
+// in case of collision with the disco ball change Cat Image back to playerImage + make cat rotate --score
             game.player.rotation = true
             game.score -= 50
             console.log(game.score)
@@ -126,7 +126,7 @@ class RainbowDiamond {
         if (game.inSpace){
             game.background.backgroundImages = game.spaceBackground
         }
-            game.score += 20
+            game.score += 10
             console.log(game.score)
             return true
     }
