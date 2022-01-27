@@ -15,15 +15,5 @@ function keyPressed() {
     // arrow up = jump
 	if (keyCode === 38) {
 		game.player.jump()
-	}
-
-    //arrow right = faster to the right
-    if(keyCode === 39) {
-        game.player.forwardJump()
-    }
-
-    // arroe left = backwards
-    if(keyCode === 37) {
-        game.player.backwardJump()
     }
 }

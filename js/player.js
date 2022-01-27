@@ -10,7 +10,7 @@ class Player {
 
         this.forward = 0
         this.backward = 0
-    
+        this.catImage = game.playerImage
     }
 
     jump(){
@@ -18,11 +18,11 @@ class Player {
     }
 
     forwardJump(){
-        this.forward = 40
+        this.forward += 0.5
         this.x += this.forward
     }
     backwardJump(){
-        this.backward = 40
+        this.backward += 0.5
         this.x -= this.backward
 
     }
@@ -38,10 +38,19 @@ class Player {
         if(this.x >= width - this.width) {
             this.x = width - this.width
         }
+        if(this.x <= 0) {
+            this.x = 0
+        }
+
+        if(keyIsDown(39)){
+            this.forwardJump();
+        }
+
+        if(keyIsDown(37)){
+            this.backwardJump();
+        }
 
         console.log("here goes the player")
-        image(game.playerImage, this.x, this.y, this.width, this.height)
-    }
-
-  
+        image(this.catImage, this.x, this.y, this.width, this.height)
+    } 
 }

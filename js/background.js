@@ -1,8 +1,10 @@
 class Background {
+    constructor(){
+        this.backgroundImages = game.nightBackground
+    }
     
     draw() {
-        console.log('this is the background')
-        game.backgroundImages.forEach(function (img){
+        this.backgroundImages.forEach(function (img){
             img.x -= img.speed
         
 
