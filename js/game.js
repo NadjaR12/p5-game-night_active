@@ -5,6 +5,8 @@ class Game {
         this.spaceBackground
         this.score = 0
         this.collisionSound
+        this.catchedSound
+        this.spaceSound
     }
 
     setup() {
@@ -19,8 +21,11 @@ class Game {
     }
 
     preload() {
-        // Sound geht nicht ....this.collisionSound = loadSound('sound/Grunting-from-Being-Hit-A5-www.fesliyanstudios.com.mp3')
-
+// sound
+        this.collisionSound = loadSound('sound/mixkit-angry-cartoon-kitty-meow-94.wav')
+        this.catchedSound = loadSound('sound/mixkit-short-laser-gun-shot-1670.wav')
+        this.spaceSound = loadSound('sound/mixkit-short-transition-sweep-175.wav')
+//background prallax
         this.nightBackground = [
             {src: loadImage('assets/background/Parallax Desert Background (Seamless)/01_Sky.png'), x: 0, speed: 0},
             {src: loadImage('assets/background/Parallax Desert Background (Seamless)/02_Stars.png'), x: 0, speed: 0},
@@ -30,7 +35,6 @@ class Game {
             {src: loadImage('assets/background/Parallax Desert Background (Seamless)/07_Cloud.png'), x: 0, speed: 3},
             {src: loadImage('assets/background/Parallax Desert Background (Seamless)/09_Cloudsmall.png'), x: 0, speed: 4}
         ]
-
         this.spaceBackground = [
         {src: loadImage('assets/background/Space/Nebula Blue.png'), x: 0, speed: 0},
         //{src: loadImage('assets/background/Parallax Desert Background (Seamless)/03_Moon.png'), x: 0, speed: 0},
@@ -38,12 +42,11 @@ class Game {
         {src: loadImage('assets/background/Space/Stars Small_2.png'), x: 0, speed: 3},
         {src: loadImage('assets/background/Space/Stars-Big_1_1_PC.png'), x: 0, speed: 4},
         {src: loadImage('assets/background/Space/Stars-Big_1_2_PC.png'), x: 0, speed: 5}]
-   
-
+//player pictures
         this.playerImage = loadImage('assets/character/trippycat.png')
         this.trippyCatImage = [loadImage('assets/character/trippycatgreen.png'), loadImage('assets/character/trippycatorange.png'), loadImage('assets/character/trippycatpink.png'), loadImage('assets/character/trippycatturquoise.png'), loadImage('assets/character/trippycatyellow.png'), loadImage('assets/character/trippycatred.png'), loadImage('assets/character/trippycatblue.png')]
         this.rotatingCatImage = loadImage('assets/character/editor-1s-47px (1).gif')
-
+//obstacle icons
         this.diamondImage = loadImage('assets/obstacles/pngkey.com-diamond-sparkle-png-4926558.png')
         this.thirdeyeImage = loadImage('assets/obstacles/icons8-third-eye-symbol-64.png') 
         this.whiteDiamondImage = loadImage('assets/obstacles/disco-ball-png-27276.png')

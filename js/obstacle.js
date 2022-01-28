@@ -18,6 +18,7 @@ class Obstacle {
         if (dist(obstacleX, obstacleY, playerX, playerY) > 25) {
             return false
         } else {
+            game.catchedSound.play()
             game.score += 1
             console.log(game.score)
             return true
@@ -51,7 +52,7 @@ class Diamond {
         if (dist(obstacleX, obstacleY, playerX, playerY) > 25) {
             return false
         } else {
-        // in case of collision change Cat Image
+// change Cat Image
             game.player.catImage = game.trippyCatImage[Math.floor(Math.random() * game.trippyCatImage.length)]
             game.score += 20
             console.log(game.score)
@@ -86,7 +87,7 @@ class Whitediamond {
         if (dist(obstacleX, obstacleY, playerX, playerY) > 30) {
             return false
         } else {
-// in case of collision with the disco ball change Cat Image back to playerImage + make cat rotate --score
+// in case of collision with the disco ball change Cat Image back to playerImage + make cat rotate + cat makes angry sound --score
             game.collisionSound.play()
             game.player.rotation = true
             game.score -= 50
@@ -120,13 +121,14 @@ class RainbowDiamond {
 
         if (dist(obstacleX, obstacleY, playerX, playerY) > 20) {
             return false
-        } else {game.inSpace = true}
-
-      
+        } else {
+            game.inSpace = true
+        }  
 // in case of collision change background Images für Zeitintervall
         if (game.inSpace){
             game.background.backgroundImages = game.spaceBackground
         }
+            game.spaceSound.play()
             game.score += 10
             console.log(game.score)
             return true

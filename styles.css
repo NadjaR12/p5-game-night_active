@@ -16,7 +16,7 @@ h1 {
   padding: 20px;
   color: rgb(168, 234, 236);
   font-size: 50px;
-  background-image: url('assets/obstacles/disco-ball-png-27276.png'), linear-gradient(to bottom, #f2709c, #ff9472);
+  background-image: url('assets/obstacles/disco-ball-png-27276.png'), linear-gradient(to bottom, #f2709c, #f2709c);
   repeat: repeat;
   background-size: 25%;
 }
